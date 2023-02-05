@@ -1,88 +1,46 @@
 
-@font-face {
-    font-display: swap;    
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 800;
-    src: url('../fonts/raleway-v28-latin-800.woff2') format('woff2'),
-       
-        url('../fonts/raleway-v28-latin-800.woff') format('woff');
 
-       
-            @font-face {
-                font-display: swap;
-                
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
-                    
-                    url('../fonts/roboto-v30-latin-regular.woff') format('woff');
-                
-            }
-        
-            
-            @font-face {
-                font-display: swap;
-                
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 500;
-                src: url('../fonts/roboto-v30-latin-500.woff2') format('woff2'),
-                   
-                    url('../fonts/roboto-v30-latin-500.woff') format('woff');
-                
-            }
-        
-           
-            @font-face {
-                font-display: swap;
-                
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 700;
-                src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2'),
-                   
-                    url('../fonts/roboto-v30-latin-700.woff') format('woff');
-               
-            }
-    
-}
 
 :root {
     --color-brand:#4D5AE5;
     --color-pressed-state:#404BBF;
---color-primary: #2E2F42;
---color-second-primary: #FFFFFF;
---color-text:#434455;
+    --color-primary: #2E2F42;
+    --color-text: #434455;
+    --color-primary-background: #E5E5E5;
+    --color-white:#ffffff;
+    --color-hairline:#E7E9FC;
+    --color-background-light:#F4F4FD
 }
 
 body{
 
-color:#434455;;
-    background-color:#E5E5E5 ;
+    color: var(--color-text);
+    background-color:var(color-primary-background) ;
     font-family: roboto, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .header{
-  background-color: #FFFFFF;
+  background-color: var(color-white);
 }
 
 .logo {
-    color :#2E2F42;
+    color: var(--color-primary);
     font-family: raleway, sans-serif;
         font-size: 18px;
         font-weight: 800;
         line-height: 1.33;
+        letter-spacing: 0.03em;
+        text-decoration: none;
 
 }
 
-.web {
+.logo-web {
 
-  color:#4D5AE5;
+  color: var(--color-brand);
    font-family: raleway, sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -90,42 +48,42 @@ color:#434455;;
 }
 
 .header-links {
-        color: #2E2F42;
-        font-family: roboto, sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-                line-height: 1.5;
-        text-decoration: none;
-        
-        
+        color: var(--color-primary);
+                
+        font-weight: 500;
+         text-decoration: none;
+               
 }
 .header-links:active {
-    color:#404BBF;    
-    text-decoration: underline;
+  color: var(--color-pressed-state);
+  text-decoration: underline;
+
 }
 
+/* active page */
+ .current{
+  color: var(--color-pressed-state);
+}
+      
 .adress-link {
-    color: #434455;
-    font-family: roboto, sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.5;
-        text-decoration: none;
+    color: var(--color-primary);    
+    text-decoration: none;
 }
 
-   .adress-link:active {
+   
+   .adress-link:focus,
+    :hover {
 
-    color: #404BBF;
-    text-decoration: underline;
+    color: var(--color-pressed-state);
+    
 
  }
 .heroe {
-background-color: #2E2F42;
+background-color: var(--color-primary);
 }
 .heroe-title {
-color: #FFFFFF;
- font-family: roboto, sans-serif;
-  font-size: 56px;
+  color: var(--color-white);
+   font-size: 56px;
   font-weight: 700;
   line-height: 1.08;
   text-decoration: none;
@@ -135,137 +93,141 @@ ul {
 }
 
 .primary-button{
-  color: #FFFFFF;
-  background-color:#4D5AE5; ;
-    font-family: roboto, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    text-decoration: none;
-    text-transform: uppercase;
-            border: 1px solid #4D5AE5;
-            box-shadow: 0px 4px 4px;
+  color: var(--color-white);
+  background-color: var(--color-brand);
+        font-weight: 500;
+        letter-spacing: 0.04em;
+       text-decoration: none;
+       text-transform: uppercase;
+        border: 1px solid var(--color-brand);
+       box-shadow: 0px 4px 4px;
       border-radius: 4px;
       cursor: pointer;
 
 }
 .primary-button:hover{
-background-color:#404BBF;
+background-color:var(--color-pressed-state);
 
 }
 .features-section{
-  color:#E5E5E5;
+  background-color:var (--color-primary-background);
 }
 
-.features-heading {
-  color: #2E2F42;
-    font-family: roboto, sans-serif;
+.features-title {
+  color:var(--color-primary);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
-    font-weight: bold;
+    
 }
 .what-are-we-doing-section{
-background-color: #E5E5E5;
+background-color: (--color-primary-background);
 }
 
-.secondary-header{
-  color: #2E2F42;
-    font-family: roboto, sans-serif;
-    font-size: 36px;
+.secondary-title{
+  color: var(--color-primary);
+       font-size: 36px;
     font-weight: 700;
     line-height: 1.11;
 }
-.foto-monitor{
+.what-are-we-doing-foto{
   
-       border: 1px solid #E7E9FC;
+       border: 1px solid var(--color-cornflower);
    
    }
     
-.many-massenges {
-  border: 1px solid #E7E9FC;
-}
-.foto-mobile-with-nootbook{
-  border: 1px solid #E7E9FC;
-}
 
 .team-section{
-  background-color: #F4F4FD;
+  background-color: var(--color-background-light);
 }
 
 .team-title{
-  color: #2E2F42;
-    font-family: roboto, sans-serif;
-    font-size: 36px;
+  color:var(--color-primary);
+        font-size: 36px;
     font-weight: 700;
     line-height: 1.08;
     
  }
 
       .name-team{
-        color: #2E2F42;
-          font-family: roboto, sans-serif;
-          font-size: 20px;
+        color: var(--color-primary);
+         font-size: 20px;
           font-weight: 600;
           line-height: 1.5;
           
       }
 
       .footer{
-        background-color:#2E2F42;
+        background-color:var(--color-primary);
       }
+      
 
       .logo-footer{
-        color: #F4F4FD;
+        color:var(--color-background-light);
           font-family: raleway, sans-serif;
           font-size: 18px;
           font-weight: 800;
           line-height: 1.33;
+          text-decoration: none;
+          
       }
+     
+            .web {
+      
+              color: var(--color-brand);
+              font-family: raleway, sans-serif;
+              font-size: 18px;
+              font-weight: 800;
+              line-height: 1.33;
+            }
+
+
       .footer-text{
-        color: #E7E9FC;
+        color: var(--color-hairline);
          
       }
 
       /* Portfolio filter */
       
       .filter-button{
-        color: #4D5AE5;
-          background-color:#F4F4FD;
-          
-          font-family: roboto, sans-serif;
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 1.5;
+        color: var(--color-brand);
+          background-color:var(--color-background-light);
+          font-weight: 500;          
+          letter-spacing: 0.04em;
           text-decoration: none;
           text-transform: uppercase;
-          border: 1px solid #E7E9FC;
+          border: 1px solid var(--color-hairline);
           box-shadow: 0px 4px 4px;
           border-radius: 4px;
           cursor: pointer;
       }
 
             .filter-button:hover {
-              color: #FFFFFF;
-              background-color: #404BBF;
+              color: var(--color-white);
+              background-color:var(--color-pressed-state);
               box-shadow:  0px 3px 1px;
         
               /* portfolio-links */
         }
         .portfolio-foto{
-          color: #4D5AE51A;
+          
           background-blend-mode: soft-light, normal;
         }
 
         .portfolio-title{
-          color: #2E2F42;
-            font-family: roboto, sans-serif;
+          color: var(--color-primary);
+            
             font-size: 20px;
-            font-weight: 500;
-            letter-spacing: 2%;
+            font-weight: 500;           
             line-height: 1.2;            
             
+        }
+
+        .portfolio-text{
+        color: var(--color-text);
+          font-family: roboto, sans-serif;
             
+           
         }
 
 
