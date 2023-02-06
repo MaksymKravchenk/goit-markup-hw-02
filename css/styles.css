@@ -15,16 +15,14 @@
 body{
 
     color: var(--color-text);
-    background-color:var(color-primary-background) ;
+    background-color:var(--color-white) ;
     font-family: roboto, sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+        
 }
 
 .header{
-  background-color: var(color-white);
+  background-color: var(--color-white);
 }
 
 .logo {
@@ -35,28 +33,30 @@ body{
         line-height: 1.33;
         letter-spacing: 0.03em;
         text-decoration: none;
+        text-transform: uppercase;
 
 }
 
 .logo-web {
 
   color: var(--color-brand);
-   font-family: raleway, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 1.33;
+   
 }
 
 .header-links {
         color: var(--color-primary);
                 
         font-weight: 500;
+        line-height: 1.5;
+          letter-spacing: 0.02em;
          text-decoration: none;
                
 }
-.header-links:active {
+.header-links:active,
+:hover,
+:focus {
   color: var(--color-pressed-state);
-  text-decoration: underline;
+  
 
 }
 
@@ -68,11 +68,15 @@ body{
 .adress-link {
     color: var(--color-primary);    
     text-decoration: none;
+    line-height: 1.5;
+      letter-spacing: 0.02em;
+    font-style: normal;
 }
 
    
    .adress-link:focus,
-    :hover {
+   .adress-link :hover {
+    
 
     color: var(--color-pressed-state);
     
@@ -86,6 +90,7 @@ background-color: var(--color-primary);
    font-size: 56px;
   font-weight: 700;
   line-height: 1.08;
+  letter-spacing: 0.02em;
   text-decoration: none;
 }
 ul {
@@ -95,20 +100,41 @@ ul {
 .primary-button{
   color: var(--color-white);
   background-color: var(--color-brand);
+  font-family: inherit;
         font-weight: 500;
+        line-height: 1.5;
         letter-spacing: 0.04em;
        text-decoration: none;
-       text-transform: uppercase;
-        border: 1px solid var(--color-brand);
+         border: 1px solid transparent;
        box-shadow: 0px 4px 4px;
       border-radius: 4px;
       cursor: pointer;
 
 }
-.primary-button:hover{
+.primary-button:hover,
+:focus {
 background-color:var(--color-pressed-state);
 
+
 }
+
+.visually-hidden {
+  position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+  
+  
+
+
+
 .features-section{
   background-color:var (--color-primary-background);
 }
@@ -118,7 +144,15 @@ background-color:var(--color-pressed-state);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
-    
+    letter-spacing: 0.02em;
+        
+}
+
+.features-text{
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;     
+    letter-spacing: 0.02em;
 }
 .what-are-we-doing-section{
 background-color: (--color-primary-background);
@@ -129,6 +163,7 @@ background-color: (--color-primary-background);
        font-size: 36px;
     font-weight: 700;
     line-height: 1.11;
+    letter-spacing: 0.02em;
 }
 .what-are-we-doing-foto{
   
@@ -140,12 +175,16 @@ background-color: (--color-primary-background);
 .team-section{
   background-color: var(--color-background-light);
 }
+.team-list{
+  background-color: var(--color-white)
+}
 
 .team-title{
   color:var(--color-primary);
         font-size: 36px;
     font-weight: 700;
     line-height: 1.08;
+    letter-spacing: 0.02em;
     
  }
 
@@ -154,7 +193,12 @@ background-color: (--color-primary-background);
          font-size: 20px;
           font-weight: 600;
           line-height: 1.5;
+          letter-spacing: 0.02em;
           
+      }
+      .team-position{                 
+          line-height: 1.5;
+          letter-spacing: 0.02em;
       }
 
       .footer{
@@ -169,21 +213,21 @@ background-color: (--color-primary-background);
           font-weight: 800;
           line-height: 1.33;
           text-decoration: none;
+          text-transform: uppercase;
           
       }
      
             .web {
       
               color: var(--color-brand);
-              font-family: raleway, sans-serif;
-              font-size: 18px;
-              font-weight: 800;
-              line-height: 1.33;
+             
             }
 
 
       .footer-text{
         color: var(--color-hairline);
+        line-height: 1.5;
+        letter-spacing: 0.02em;
          
       }
 
@@ -192,40 +236,45 @@ background-color: (--color-primary-background);
       .filter-button{
         color: var(--color-brand);
           background-color:var(--color-background-light);
+          font-family: roboto, sans-serif;
           font-weight: 500;          
-          letter-spacing: 0.04em;
-          text-decoration: none;
-          text-transform: uppercase;
-          border: 1px solid var(--color-hairline);
-          box-shadow: 0px 4px 4px;
+          letter-spacing: 0.04em;          
+           border: 1px solid var(--color-hairline);
+          
           border-radius: 4px;
           cursor: pointer;
       }
 
-            .filter-button:hover {
+            .filter-button:hover,
+             :focus           {
               color: var(--color-white);
               background-color:var(--color-pressed-state);
               box-shadow:  0px 3px 1px;
         
               /* portfolio-links */
         }
-        .portfolio-foto{
-          
-          background-blend-mode: soft-light, normal;
-        }
+        .portfolio-link{
+          background-color: var(--color-white)
 
+        }
+          
+        
         .portfolio-title{
           color: var(--color-primary);
+          font-family: roboto, sans-serif;
             
             font-size: 20px;
             font-weight: 500;           
-            line-height: 1.2;            
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            text-decoration: none;
             
         }
 
         .portfolio-text{
         color: var(--color-text);
-          font-family: roboto, sans-serif;
+          text-decoration: none;
+          letter-spacing: 0.02em;
             
            
         }
