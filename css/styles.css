@@ -39,7 +39,7 @@ body{
 
 .logo-web {
 
-  color: var(--color-brand);
+  color:var(--color-brand);
    
 }
 
@@ -53,8 +53,8 @@ body{
                
 }
 .header-links:active,
-.header-lin:hover,
-.header-lin:focus {
+.header-links:hover,
+.header-links:focus {
   color: var(--color-pressed-state);
   
 
@@ -75,7 +75,7 @@ body{
 
    
    .adress-link:focus,
-   .adress-link :hover {
+   .adress-link:hover {
     
 
     color: var(--color-pressed-state);
@@ -108,7 +108,7 @@ ul {
          border: 1px solid transparent;       
       border-radius: 4px;
       cursor: pointer;
-      font-size: 20px ;
+      font-size: 16px;
 
 }
   .primary-button:hover,
@@ -149,8 +149,7 @@ background-color:var(--color-pressed-state);
 }
 
 .features-text{
-  font-weight: 400;
-    font-size: 16px;
+     font-size: 16px;
     line-height: 1.5;     
     letter-spacing: 0.02em;
 }
@@ -183,7 +182,7 @@ background-color: (--color-primary-background);
   color:var(--color-primary);
         font-size: 36px;
     font-weight: 700;
-    line-height: 1.08;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     
  }
@@ -237,7 +236,9 @@ background-color: (--color-primary-background);
         color: var(--color-brand);
           background-color:var(--color-background-light);
           font-family: roboto, sans-serif;
-          font-weight: 500;          
+          font-weight: 500; 
+          font-size: 16px;   
+          line-height: 1.5;      
           letter-spacing: 0.04em;          
            border: 1px solid var(--color-hairline);
           
@@ -253,9 +254,13 @@ background-color: (--color-primary-background);
         
               /* portfolio-links */
         }
-        .portfolio-link{
+        .portfolio-list{
           background-color: var(--color-white)
 
+        }
+
+        .portfolio-link{
+          text-decoration: none;
         }
           
         
